@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <p>Ejercicio 2</p>
+        <input type="button" value="Añade una tabla"
+        onclick = "genera_tabla()"/>
+    <!--Añadimos el boton para tener la opcion de poder generar una tabla.-->
+    <script>
+        function genera_tabla(){
+          //Obtenemos la referencia de nuestro body.//
+          let body = document.getElementsByTagName("body")[0];
+          
+          let tabla = document.createElement("table");
+          let tblBody = document.createElement("tbody");
+          //Creamos tanto elemento tabla, como el body para tener la estructura.//
+          const estiloTabla = "color : blue; font-size: 12px";
+          
+          //Creamos una constante para poder darle estilo a nuestra tabla tanto, el color del texto, como al tamaño de la tabla// 
+
+          for (let i = 0; i < 2; i ++){
+            let fila = document.createElement("tr");
+            //Creamos una fila para nuestra tabla.//
+            for(let j = 0; j < 1; j++){
+            let celda =  document.createElement("td");
+            let textoCelda = document.createTextNode( "Espacio " + i );
+            //Creamos un elemento  un nodo de texto.//
+            celda.appendChild(textoCelda);
+            fila.appendChild(celda);
+            //Agregamos la fila  al final de la tabla, en el elemento body.//
+          }  
+          tblBody.appendChild(fila);
+          //Agregamos una fila al final de la tabla.//
+        }
+        tabla.style = estiloTabla;
+        //Aqui llamamos a la constante para que se active cada vez que abramos la tabla.//
+        tabla.appendChild(tblBody);
+        //posicionamos el body debajo del elemento tabla.//
+        body.appendChild(tabla)
+        //modifica el atributo border d ela tabla y lo fija.//
+        tabla.setAttribute("border", "7");
+    }
+        </script>
+    </body>
+</html>>
