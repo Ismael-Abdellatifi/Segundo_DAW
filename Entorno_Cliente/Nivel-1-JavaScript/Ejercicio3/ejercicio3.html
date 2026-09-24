@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJercicio3</title>
+</head>
+<body>
+    <p>Ejercicio3</p>
+    <input type ="text" id="1">
+    <input type ="text" id="2">
+     <!--Añadimos los recuadros de texto para que el usuario pueda insertar dos numeros
+     para que pueda comprobar y ejectuar al suma correspondiente.-->
+    <button onclick="sumar()">Sumar</button>
+    <!-- Añadimos el boton de sumar para que  nos salga el resultado correspondiente-->
+    <script>
+        function sumar() {
+            let numero1 = Number(document.getElementById("1").value);
+            let numero2 = Number(document.getElementById("2").value);
+         //Esto nos permite  primero buscar el elemento que tenga a id 1, 
+         // luego evalua que numero se ha puesto en el cuadro, lo guarda en nuestra variable.
+            let suma = numero1 + numero2;
+            //Hace la operacion de suma con nuestras dos variables que guardaron lo que 
+            //escribio el usuario y se haria la operacion correctamente.
+            alert("La suma es: " + suma);
+            //Aqui mostramos una ventana la cual nos da e resultado.
+
+        }
+    </script>
+</body>
+</html>

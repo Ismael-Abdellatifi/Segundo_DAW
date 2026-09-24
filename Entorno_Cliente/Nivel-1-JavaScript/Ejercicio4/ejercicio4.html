@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <p>Ejercicio4</p>
+    <input type ="text" id="1">
+    <input type ="text" id="2">
+     <!--Añadimos los recuadros de texto para que el usuario pueda insertar dos numeros
+     para que pueda comprobar y ejecutar.-->
+    <button onclick="mostrar()">Mostrar</button>
+    <!-- Añadimos el boton de mostrar para que  nos salga el resultado correspondiente-->
+     <div id="resultado"></div>
+     <!-- Gracias a poner esta id luego a usaremos en nuestra tabla-->
+    <script>
+        function mostrar() {
+            let numero1 = Number(document.getElementById("1").value);
+            let numero2 = Number(document.getElementById("2").value);
+         //Esto nos permite  primero buscar el elemento que tenga la id 1 y el id 2, 
+         // luego evalua que numero se ha puesto en el cuadro, lo guarda en nuestra variable.
+              document.getElementById("resultado").innerHTML =
+                "<table border='5'>" +
+                "<tr><th>Cuadro 1</th><th>Cuadro 2</th></tr>" +
+                "<tr><td>" + numero1 + "</td><td>" + numero2 + "</td></tr>" +
+                "</table>";
+                //Buscamos el elemento resultado y mostramos dentro de la tabla,
+                //los valores que tenemos que mostrar de las variabes numero1 y numero2.
+         }
+    </script>
+    
+</body>
+</html>

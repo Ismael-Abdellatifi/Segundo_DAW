@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6</title>
+</head>
+<body>
+    <p>Ejercicio6</p>
+    <img id ="imagen" src="hiena.jpg" width="600" height="600">
+    <!-- Creamos un elemento con su id imagen,insertamos la imagen que queremos usar,
+     le ponemos unos valores predreterminados y muy importante a imagen que queremos usar
+     tiene que estar en la misma ubicacion que nuestro ejercicio.-->
+     <br><br>
+     <input type="text" id="ancho" placeholder="Ancho">
+     <input type="text" id="alto" placeholder="Alto">
+     <button onclick="cambiarTamaño()">Cambiar Tamaño</button>
+    <!-- Creamos un boton para poder cambiar de tamaño a imagen.-->
+    <script>
+       function cambiarTamaño(){
+            let ancho = Number(document.getElementById("ancho").value);
+            let alto = Number(document.getElementById("alto").value);
+
+            document.getElementById("imagen").width = ancho;
+            document.getElementById("imagen").height = alto;
+        }
+        //Creamos una funcion cambiarTamaño, llamamos a nuestra id imagen,
+        // la cual tanto de ancho y de alto le hemos puesto unos valores predeterminados,
+        //en este caso hemos creado dos variables que se llaman alto y ancho el cual dependiendo
+        //de lo que ponga el usuario en los recuadros la imagen se vera con un ancho y un alto diferente.
+    </script>
+</body>
+</html>
